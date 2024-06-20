@@ -2,6 +2,8 @@ import os
 import glob
 import cv2
 import mediapipe as mp
+import json
+
 
 nodeList = mp.solutions.pose.PoseLandmark
 mp_pose = mp.solutions.pose
@@ -83,5 +85,17 @@ def getMediapipeResult(frame, mode=True):
         return point2d, point3d
     except:
         return 0, 0
+
+
+# 儲存 json 檔案
+def save_json(path, file_name, json_data):
+    output_json_path = path + "/" + file_name
+
+    # 檢查路徑是否存在，如果不存在則創建
+    if not os.path.exists(path):
+        os.makedirs(path)
+
+    with open(output_json_path, 'w') as json_file:
+        json.dump(json_data, json_file, indent=4)
 
 
