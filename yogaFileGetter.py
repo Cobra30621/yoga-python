@@ -78,24 +78,23 @@ def get_roi(pose):
     return {}
 
 def get_sample_angle_dict(pose):
+    path = "JsonFile/" + pose + "/sample.json"
+    dict = toolkit.readSampleJsonFile(path)
+    return dict
+
+def get_sample_score_angle_dict(pose):
     path = "JsonFile/" + pose + "/sample_score.json"
     dict = toolkit.readSampleJsonFile(path)
-    print(path)
-    print(dict)
     return dict
 
 def get_std_angle_dict(pose):
     path = "JsonFile/" + pose + "/std_angle.json"
     dict = toolkit.readSampleJsonFile(path)
-    print(path)
-    print(dict)
     return dict
 
 def get_weight_angle_dict(pose):
     path = "JsonFile/" + pose + "/weight.json"
     dict = toolkit.readSampleJsonFile(path)
-    print(path)
-    print(dict)
     return dict
 
 

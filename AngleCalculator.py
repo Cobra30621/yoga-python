@@ -19,8 +19,6 @@ def getLandmark(landmark):
 
 # 計算角度:給 Android Studio 用
 def calculate_angle_in_andriodStudio( pose, point):
-    print("score, r_point3d", point)
-
     angle_def = yogaFileGetter.get_angle_def(pose)
     angle_dict = initialAngleDict(angle_def)
 
@@ -31,7 +29,6 @@ def calculate_angle_in_andriodStudio( pose, point):
             ang.append(point.get(i).get(j))
         point3d.append(ang)
 
-    print("score,point3d", point3d)
 
     for key,value in angle_def.items():
         if float(point3d[value[0]][3]) < toolkit.MIN_DETECT_VISIBILITY and float(point3d[value[1]][3]) < toolkit.MIN_DETECT_VISIBILITY and float(point3d[value[2]][3]) < toolkit.MIN_DETECT_VISIBILITY :
@@ -43,7 +40,6 @@ def calculate_angle_in_andriodStudio( pose, point):
             angle = toolkit.computeAngle(point3d[value[0]], point3d[value[1]], point3d[value[2]])
             angle_dict[key] = angle
 
-    print("angle_dict", angle_dict)
     return angle_dict
 
 def initialAngleDict( angle_def):

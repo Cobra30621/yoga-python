@@ -86,6 +86,23 @@ def getMediapipeResult(frame, mode=True):
     except:
         return 0, 0
 
+# 將圖片等比例縮放
+def resize_image(image, target_length):
+    # 取得圖片的原始寬高
+    height, width = image.shape[:2]
+
+    # 計算縮放比例
+    scale = target_length / max(height, width)
+
+    # 計算新的寬高
+    new_width = int(width * scale)
+    new_height = int(height * scale)
+
+    # 進行縮放
+    resized_image = cv2.resize(image, (new_width, new_height))
+
+    return resized_image
+
 
 # 儲存 json 檔案
 def save_json(path, file_name, json_data):
