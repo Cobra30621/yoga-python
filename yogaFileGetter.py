@@ -53,6 +53,18 @@ yogaFileDict = {
         "angle_def": AngleNodeDef.PYRAMID_ANGLE,
         "default_image_path" : "image/Pyramid pose/6.jpg"
     }
+    ,
+    "Mountain pose": {
+        "roi": AngleRegion.MOUNTAIN,
+        "angle_def": AngleNodeDef.MOUNTAIN_ANGLE,
+        "default_image_path" : ""
+    }
+    ,
+    "Triangle pose": {
+        "roi": AngleRegion.TRIANGLE,
+        "angle_def": AngleNodeDef.TRIANGLE_ANGLE,
+        "default_image_path" : ""
+    }
 }
 
 
