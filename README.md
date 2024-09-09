@@ -13,7 +13,7 @@
 ### root 資料夾的 py 檔
 - 關節點與角度
   - AngleNodeDef: 不同動作關心的關節點
-  - AngleRegion
+  - AngleRegion: 判斷該關節點的條件是否有符合
   - AngleCalculator: 輸入 Mediapipe 偵測結果，計算關節的角度
 - 瑜珈教練系統
   - toolkit : 瑜珈教練系統的工具
@@ -58,7 +58,7 @@ pip install requirements.txt
 ### 2. 新增基礎資料
 
 - 在 [AngleNodeDef.py](AngleNodeDef.py) 新增該動作需要的關節點
-- 在 [AngleRegion.py](AngleRegion.py) 新增該動作的 XXX
+- 在 [AngleRegion.py](AngleRegion.py) 新增該動作的
 - 在 [yogaFileGetter.py](yogaFileGetter.py) 的 yogaFileDict 中，新增該動作的相關檔案
 
 

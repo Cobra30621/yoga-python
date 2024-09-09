@@ -6,7 +6,7 @@ yogaFileDict = {
     "Tree Style": {
         "roi": AngleRegion.TREE,
         "angle_def": AngleNodeDef.TREE_ANGLE,
-        "default_image_path" : "image/Tree Style/8.jpg",
+        "default_image_path" : "image/Tree Style/8.jpg"
     },
     "Warrior2 Style": {
         "roi": AngleRegion.WARRIOR_II,
@@ -52,18 +52,16 @@ yogaFileDict = {
         "roi": AngleRegion.PYRAMID,
         "angle_def": AngleNodeDef.PYRAMID_ANGLE,
         "default_image_path" : "image/Pyramid pose/6.jpg"
-    }
-    ,
-    "Mountain pose": {
+    },
+    "Mountain pose":{
         "roi": AngleRegion.MOUNTAIN,
         "angle_def": AngleNodeDef.MOUNTAIN_ANGLE,
-        "default_image_path" : ""
-    }
-    ,
-    "Triangle pose": {
+        "default_image_path" : "image/Mountain pose/1.jpg"
+    },
+    "Triangle pose":{
         "roi": AngleRegion.TRIANGLE,
         "angle_def": AngleNodeDef.TRIANGLE_ANGLE,
-        "default_image_path" : ""
+        "default_image_path" : "image/Triangle pose/1.jpg"
     }
 }
 
@@ -111,7 +109,8 @@ def get_weight_angle_dict(pose):
 
 
 def get_image_path(pose):
-    return "image/" + pose
+    pose_info = get_pose_info(pose)
+    return pose_info["default_image_path"]
 
 
 
