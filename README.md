@@ -33,6 +33,9 @@
 
 ## SetUp
 
+
+- python 版本: 3.8
+
 ```
 pip install requirements.txt
 ```
