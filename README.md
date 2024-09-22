@@ -2,6 +2,11 @@
 
 此專案為工研院瑜珈計畫中，python 研究的內容。
 
+## 相關連結
+- [DEMO 影片](https://drive.google.com/file/d/1XnLvYemSO6tJmY0c4b1UstpTUBWQwr3Q/view?usp=sharing)
+- [瑜珈 Android 版本](https://github.com/28921085/YogaAndroid)
+- [2024 演討會論文](https://docs.google.com/document/d/1sWPlbKvfi4x-Idih0DI4toHYrIhyDv6y/edit?rtpof=true)
+
 
 ## 專案架構
 - data: 資料集
